@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# create symlinks 
+# UBUNTU Data Science / Spark Machine installation
 
+# create symlinks 
 create_symlinks() {
     # Get the directory in which this script lives.
     script_dir=$(dirname "$(readlink -f "$0")")
@@ -20,29 +21,28 @@ create_symlinks() {
 
 create_symlinks
 
-# echo "Initializing conda for zsh."
-# conda init zsh
-
-# echo "Installing fonts."
-# FONT_DIR="$HOME/.fonts"
-# git clone https://github.com/powerline/fonts.git $FONT_DIR --depth=1
-# cd $FONT_DIR
-# ./install.sh
-
-# echo "Setting up the Spaceship theme."
-# ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-# git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-# ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+echo "Installing fonts."
+FONT_DIR="$HOME/.fonts"
+git clone https://github.com/powerline/fonts.git $FONT_DIR --depth=1
+cd $FONT_DIR
+./install.sh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+conda init zsh
 
 conda install -c conda-forge starship
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-cp -f .devcontainer/.zshrc ~/.zshrc
-cp -f .devcontainer/starship.toml ~/.config/
+git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+sudo apt install bat
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
+apt install exa
+
