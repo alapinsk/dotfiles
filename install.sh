@@ -40,7 +40,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
-echo "Create symlinks!" 
+echo "Create symlinks! TODO: Does not work ;(" 
 create_symlinks
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
