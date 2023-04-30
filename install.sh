@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd dotfiles
-
 # UBUNTU Data Science / Spark Machine installation
 
 # create symlinks 
