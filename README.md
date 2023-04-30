@@ -5,5 +5,5 @@ Credits to fantastic article: https://engineeringfordatascience.com/posts/config
 
 
 ```sh
-
+git clone https://github.com/alapinsk/dotfiles.git | cd dotfiles | sh -c ./install.sh -y -f 
 ```
