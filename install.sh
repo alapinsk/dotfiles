@@ -16,5 +16,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | sh -c ~/.fzf/install -y -f
 
 echo "generate symlinks"
-ln -s ~/dotfiles/.zshrc  ~/.zshrc
-ln -s ~/dotfiles/.config/starship.toml  ~/.config/starship.toml
+ln -s -f ~/dotfiles/.zshrc  ~/.zshrc
+ln -s -f ~/dotfiles/.config/starship.toml  ~/.config/starship.toml
