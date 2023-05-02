@@ -24,21 +24,12 @@ plugins=(
 
 # aliases
 alias python=python3
-alias gs="git status"
-
-alias ls="exa --icons"
-alias ll="exa -l -g --icons"
-alias lt="exa --tree --icons -a -I '.git|__pycache__|.mypy_cache|.ipynb_checkpoints'"
 
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
 alias gt='starship toggle gcloud disabled'
 
 source $ZSH/oh-my-zsh.sh
-
-# pyenv stuff
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # set starship as prompt
 eval "$(starship init zsh)"
