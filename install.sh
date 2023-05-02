@@ -2,20 +2,9 @@
 
 # UBUNTU Data Science / Spark Machine installation
 
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
-
-echo "Installing fonts."
-FONT_DIR="$HOME/.fonts"
-git clone https://github.com/powerline/fonts.git $FONT_DIR --depth=1
-cd $FONT_DIR
-./install.sh
-
-sudo fc-cache -f -v
+conda init zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
-conda init zsh
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y -f
 
@@ -25,12 +14,6 @@ git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
-
-sudo apt install bat
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
-
-apt install exa
 
 # create symlinks https://stackoverflow.com/a/246128
 SOURCE=${BASH_SOURCE[0]}
