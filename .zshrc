@@ -27,11 +27,6 @@ alias python=python3
 
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
-alias gt='starship toggle gcloud disabled'
-
 source $ZSH/oh-my-zsh.sh
-
-# set starship as prompt
-eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
