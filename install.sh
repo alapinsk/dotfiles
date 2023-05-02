@@ -16,6 +16,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | sh -c ~/.fzf/install -y -f
 
 # create symlinks https://stackoverflow.com/a/246128
+echo "Generate symlinks!"
 SOURCE=${BASH_SOURCE[0]}
 while [ -L "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
   TARGET=$(readlink "$SOURCE")
