@@ -13,7 +13,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+yes | sh -c ~/.fzf/install -y -f
 
 # create symlinks https://stackoverflow.com/a/246128
 SOURCE=${BASH_SOURCE[0]}
