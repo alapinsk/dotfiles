@@ -1,7 +1,9 @@
 # dotfiles
 
 ```sh
-git clone https://github.com/alapinsk/dotfiles.git ~/dotfiles && cd "$_" | chmod +x install.sh  | sh -c ./install.sh -y -f | exit
+git clone https://github.com/alapinsk/dotfiles.git ~/dotfiles && cd "$_" 
+chmod +x install.sh  
+sh -c ./install.sh -y -f
 ```
 
 **Troubleshooting:**
